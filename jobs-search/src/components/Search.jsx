@@ -1,4 +1,4 @@
-import { Button, Container, Form, FormControl } from "react-bootstrap"
+import { Button, Form, FormControl } from "react-bootstrap"
 import { useState, useEffect } from "react"
 
 const Search = () => {
@@ -11,10 +11,11 @@ const Search = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://remotive.io/api/remote-jobs?search=front%20end`
+        `https://strive-jobs-api.herokuapp.com/jobs?title=developer`
       )
       if (response.ok) {
-        let data = await response.json()
+        let { data } = await response.json()
+
         console.log(data)
       }
     } catch (error) {
@@ -22,7 +23,7 @@ const Search = () => {
     }
   }
   return (
-    <Container>
+    <>
       <Form inline className="justify-content-center mt-5" size="sm">
         <FormControl
           type="text"
@@ -33,7 +34,7 @@ const Search = () => {
         />
         <Button variant="outline-info">Search</Button>
       </Form>
-    </Container>
+    </>
   )
 }
 export default Search
