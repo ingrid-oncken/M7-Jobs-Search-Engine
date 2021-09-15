@@ -1,7 +1,8 @@
 import { withRouter } from 'react-router'
 import { Table } from 'react-bootstrap'
 
-const Job = ({company}) => {
+const Job = ({ props }) => {
+  console.log(props)
   return (
     <div>
       <Table>
@@ -13,14 +14,17 @@ const Job = ({company}) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{company.title}</td>
-            <td>
-              <a href={company.url}>{company.company_name}</a>
-              
-            </td>
-            <td>{company.category}</td>
-          </tr>
+          {props.map((j) => {
+            return (
+              <tr key={j._id}>
+                <td>{j.title}</td>
+                <td>
+                  <a href={j.url}>{j.company_name}</a>
+                </td>
+                <td>{j.category}</td>
+              </tr>
+            )
+          })}
         </tbody>
       </Table>
     </div>

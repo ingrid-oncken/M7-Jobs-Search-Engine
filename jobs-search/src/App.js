@@ -13,7 +13,7 @@ function App() {
       <MainNavbar />
       <Container>
         <Search />
-        <Route path="/" exact component={Job} />
+        {/* <Route path="/" exact component={Job} /> */}
       </Container>
     </Router>
   )
