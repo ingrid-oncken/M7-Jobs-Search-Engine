@@ -4,8 +4,8 @@ import './App.css'
 import MainNavbar from './components/MainNavbar'
 import Search from './components/Search'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Route } from 'react-router-dom'
-import Job from './components/Job'
+// import { Route } from 'react-router-dom'
+// import Company from './components/Company'
 
 function App() {
   return (

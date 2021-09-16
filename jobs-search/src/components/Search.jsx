@@ -2,12 +2,12 @@
 // import Details from './Details'
 
 import { Button, Container, Form, FormControl } from 'react-bootstrap'
-import { useState, useEffect } from 'react'
-import Job from './Job'
+import { useState } from 'react'
+import Company from './Company'
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState('')
-  const [jobs, setJobs] = useState([])
+  const [companies, setCompanies] = useState([])
   // useEffect(() => {
   //   fetchData()
   // }, [])
@@ -19,8 +19,8 @@ export default function Search() {
       )
       if (response.ok) {
         let { data } = await response.json()
-        setJobs(data)
-        console.log(jobs)
+        setCompanies(data)
+        console.log(companies)
       }
     } catch (error) {
       console.log(error)
@@ -41,7 +41,7 @@ export default function Search() {
         </Button>
       </Form>
 
-      <Job props={jobs} />
+      <Company props={companies} />
     </Container>
   )
 }
