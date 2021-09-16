@@ -40,17 +40,13 @@ class Details extends Component {
                   <span className="font-weight-bold">Description:</span>
                   {this.state.company.description}
                 </p> */}
-
-                {this.props.user.firstName ? (
-                  <Button
-                    color="primary"
-                    onClick={() => this.props.addToCart(this.state.company)}
-                  >
-                    LIKE
-                  </Button>
-                ) : (
-                  <div>Please log in for searching</div>
-                )}
+                <Button
+                  color="primary"
+                  onClick={() => this.props.addToCart(this.state.company)}
+                >
+                  LIKE
+                </Button>
+                }
               </Col>
             </Row>
           </>

@@ -1,10 +1,6 @@
 import { createStore } from 'redux'
 import mainReducer from '../reducers'
 
-// 3 arguments for createStore:
-// 1) primary reducer
-// 2) initial state of the app
-// 3) middlewares/plugins
 
 export const initialState = {
   favCompanies: {

@@ -1,6 +1,6 @@
-export const addToFavoriteAction = (bookToAdd) => ({
+export const addToFavoriteAction = (companyToAdd) => ({
   type: 'ADD_ITEM_TO_FAVORITE',
-  payload: bookToAdd,
+  payload: companyToAdd,
 })
 
 export const removeFromFavoriteAction = (index) => ({
